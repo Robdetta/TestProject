@@ -1,11 +1,8 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Routes,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginComponent from './join-screen/logincomponent';
+import JoinRoomComponent from './join-screen/joinRoomcomponent';
+import CreateRoomComponent from './join-screen/createRoomComponent';
 import './App.css';
 //import * as Colyseus from 'colyseus.js';
 
@@ -30,6 +27,14 @@ function App() {
         <Route
           path='/'
           element={<LoginComponent />}
+        />
+        <Route
+          path='/join-room'
+          element={<JoinRoomComponent />}
+        />
+        <Route
+          path='/create-room'
+          element={<CreateRoomComponent />}
         />
       </Routes>
     </Router>
