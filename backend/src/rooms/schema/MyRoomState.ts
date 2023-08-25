@@ -8,5 +8,5 @@ export class Player extends Schema {
 export class MyRoomState extends Schema {
   @type('string') mySynchronizedProperty: string = 'Hello world';
   @type('string') pin: string = ''; // Define the 'pin' property
-  @type({ map: Player }) players = new MapSchema<Player>();
+  @type({ map: Player }) players = new MapSchema<Player>(); // Define 'players' as MapSchema
 }
