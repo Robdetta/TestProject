@@ -2,11 +2,9 @@ import { useState } from 'react';
 import './App.css';
 import * as Colyseus from 'colyseus.js';
 import PhaserGame from './PhaserGame';
-import { Socket } from 'dgram';
 
+const client = new Colyseus.Client('ws://localhost:2567');
 function App() {
-  const client = new Colyseus.Client('ws://localhost:2567');
-
   client
     .joinOrCreate('my_room')
     .then((room) => {
